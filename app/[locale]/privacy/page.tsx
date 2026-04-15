@@ -88,15 +88,11 @@ const KO = (
         heading: "문의",
         body: (
           <p>
-            개인정보 관련 문의:{" "}
-            <a
-              href="https://github.com/cortexys-team/dive-computer-watch/issues"
-              className="text-dive-aqua hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub Issues
+            개인정보 관련 문의는{" "}
+            <a href="/ko/contact" className="text-dive-aqua hover:underline">
+              문의 페이지
             </a>
+            를 이용해 주세요.
           </p>
         ),
       },
@@ -172,15 +168,11 @@ const EN = (
         heading: "Contact",
         body: (
           <p>
-            Privacy inquiries:{" "}
-            <a
-              href="https://github.com/cortexys-team/dive-computer-watch/issues"
-              className="text-dive-aqua hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub Issues
+            For privacy inquiries, please use the{" "}
+            <a href="/en/contact" className="text-dive-aqua hover:underline">
+              contact page
             </a>
+            .
           </p>
         ),
       },

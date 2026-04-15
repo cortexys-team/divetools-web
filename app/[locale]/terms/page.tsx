@@ -64,7 +64,7 @@ const KO = (
         body: (
           <p>
             Cortexys Team은 사전 통지 없이 앱의 기능을 변경하거나 서비스를 종료할 권리를 보유합니다.
-            중요한 변경 사항은 GitHub 또는 App Store를 통해 공지합니다.
+            중요한 변경 사항은 App Store 업데이트 노트를 통해 공지합니다.
           </p>
         ),
       },
@@ -76,15 +76,11 @@ const KO = (
         heading: "문의",
         body: (
           <p>
-            약관 관련 문의:{" "}
-            <a
-              href="https://github.com/cortexys-team/dive-computer-watch/issues"
-              className="text-dive-aqua hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub Issues
+            약관 관련 문의는{" "}
+            <a href="/ko/contact" className="text-dive-aqua hover:underline">
+              문의 페이지
             </a>
+            를 이용해 주세요.
           </p>
         ),
       },
@@ -147,7 +143,7 @@ const EN = (
         body: (
           <p>
             Cortexys Team reserves the right to modify or discontinue the App without prior notice.
-            Material changes will be announced via GitHub or App Store.
+            Material changes will be announced via App Store update notes.
           </p>
         ),
       },
@@ -159,15 +155,11 @@ const EN = (
         heading: "Contact",
         body: (
           <p>
-            Terms inquiries:{" "}
-            <a
-              href="https://github.com/cortexys-team/dive-computer-watch/issues"
-              className="text-dive-aqua hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub Issues
+            For terms inquiries, please use the{" "}
+            <a href="/en/contact" className="text-dive-aqua hover:underline">
+              contact page
             </a>
+            .
           </p>
         ),
       },

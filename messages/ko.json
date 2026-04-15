@@ -100,10 +100,26 @@
       ]
     }
   },
+  "contact": {
+    "title": "문의하기",
+    "description": "버그 제보, 기능 요청, 협업 제안 등 무엇이든 보내주세요. 최대한 빠르게 답변 드리겠습니다.",
+    "name": "이름",
+    "namePlaceholder": "홍길동",
+    "email": "이메일",
+    "emailPlaceholder": "hello@example.com",
+    "message": "내용",
+    "messagePlaceholder": "문의 내용을 자유롭게 작성해 주세요.",
+    "send": "보내기",
+    "sending": "전송 중...",
+    "successTitle": "문의가 접수되었습니다",
+    "successBody": "빠른 시일 내에 이메일로 답변 드리겠습니다. 감사합니다.",
+    "sendAnother": "추가 문의하기",
+    "errorGeneric": "전송에 실패했습니다. 잠시 후 다시 시도해 주세요."
+  },
   "footer": {
     "privacy": "개인정보처리방침",
     "terms": "이용약관",
-    "github": "GitHub",
+    "contact": "문의",
     "appStore": "App Store",
     "copyright": "© 2026 Cortexys"
   }

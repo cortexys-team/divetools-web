@@ -100,10 +100,26 @@
       ]
     }
   },
+  "contact": {
+    "title": "Contact",
+    "description": "Bug reports, feature requests, collaboration inquiries — send anything. We'll get back to you as soon as possible.",
+    "name": "Name",
+    "namePlaceholder": "Jane Doe",
+    "email": "Email",
+    "emailPlaceholder": "hello@example.com",
+    "message": "Message",
+    "messagePlaceholder": "Write your message here.",
+    "send": "Send",
+    "sending": "Sending...",
+    "successTitle": "Message received",
+    "successBody": "We'll reply to your email as soon as possible. Thank you.",
+    "sendAnother": "Send another",
+    "errorGeneric": "Failed to send. Please try again."
+  },
   "footer": {
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
-    "github": "GitHub",
+    "contact": "Contact",
     "appStore": "App Store",
     "copyright": "© 2026 Cortexys"
   }
