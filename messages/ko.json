@@ -1,0 +1,80 @@
+{
+  "nav": {
+    "appStore": "App Store",
+    "download": "다운로드"
+  },
+  "hero": {
+    "title": "Divetools",
+    "subtitle": "Apple Watch Ultra 전용 다이브 컴퓨터",
+    "tagline": "Bühlmann ZHL-16C · 실시간 감압 · 수심 센서",
+    "cta": "App Store에서 다운로드",
+    "badge": "Apple Watch Ultra 전용",
+    "free": "무료"
+  },
+  "features": {
+    "title": "프로 다이버를 위한 기능",
+    "subtitle": "수중 안전을 위한 모든 도구가 손목 위에",
+    "items": [
+      {
+        "icon": "bubble",
+        "title": "Bühlmann ZHL-16C",
+        "desc": "GF 조정 가능한 업계 표준 감압 알고리즘. GF99·SurfGF·CNS 실시간 추적."
+      },
+      {
+        "icon": "sensor",
+        "title": "실시간 수심 센서",
+        "desc": "Apple Watch Ultra 압력 센서 기반 0.1m 정밀도. 최대 40m 수심 지원."
+      },
+      {
+        "icon": "gas",
+        "title": "가스 관리",
+        "desc": "EAN32·EAN36 등 최대 4가지 혼합 가스. ppO₂·MOD·OTU 자동 계산."
+      },
+      {
+        "icon": "wave",
+        "title": "프리다이빙 모드",
+        "desc": "자동 다이브 감지, 표면 인터벌 타이머, 최대 수심 기록."
+      },
+      {
+        "icon": "alert",
+        "title": "안전 알림",
+        "desc": "상승속도·천장 위반·CNS·OTU 실시간 경고. 6단계 햅틱 피드백."
+      },
+      {
+        "icon": "phone",
+        "title": "iPhone 동반 앱",
+        "desc": "다이브 로그 열람, 수심 프로파일 그래프, 설정 동기화."
+      }
+    ]
+  },
+  "screenshots": {
+    "title": "손목 위의 다이브 컴퓨터",
+    "subtitle": "Apple Watch Ultra에 최적화된 4존 적응형 다이브 디스플레이",
+    "labels": ["사전 다이브", "다이빙 중"]
+  },
+  "requirements": {
+    "title": "호환 기기",
+    "items": [
+      {
+        "title": "Apple Watch Ultra",
+        "desc": "1세대 · 2세대 · 3세대",
+        "note": "수심 센서 필수"
+      },
+      {
+        "title": "watchOS 10 이상",
+        "desc": "Apple Watch Ultra에서 지원"
+      },
+      {
+        "title": "iPhone + iOS 17 이상",
+        "desc": "동반 앱 및 설정 동기화"
+      }
+    ]
+  },
+  "footer": {
+    "disclaimer": "Divetools는 PADI·SSI 공인 다이브 컴퓨터를 대체하지 않습니다. 항상 인증된 장비와 함께 사용하세요.",
+    "privacy": "개인정보처리방침",
+    "github": "GitHub",
+    "appStore": "App Store",
+    "copyright": "© 2026 Cortexys"
+  }
+}

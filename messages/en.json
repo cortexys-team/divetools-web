@@ -1,0 +1,80 @@
+{
+  "nav": {
+    "appStore": "App Store",
+    "download": "Download"
+  },
+  "hero": {
+    "title": "Divetools",
+    "subtitle": "Dive Computer for Apple Watch Ultra",
+    "tagline": "Bühlmann ZHL-16C · Real-time Decompression · Depth Sensor",
+    "cta": "Download on the App Store",
+    "badge": "Apple Watch Ultra Required",
+    "free": "Free"
+  },
+  "features": {
+    "title": "Built for Pro Divers",
+    "subtitle": "Every tool for underwater safety, right on your wrist",
+    "items": [
+      {
+        "icon": "bubble",
+        "title": "Bühlmann ZHL-16C",
+        "desc": "Industry-standard decompression algorithm with adjustable GF. Real-time GF99, SurfGF, and CNS tracking."
+      },
+      {
+        "icon": "sensor",
+        "title": "Real-time Depth Sensor",
+        "desc": "0.1m precision via Apple Watch Ultra pressure sensor. Supports depths up to 40m."
+      },
+      {
+        "icon": "gas",
+        "title": "Gas Management",
+        "desc": "Up to 4 gas mixes including EAN32, EAN36. Automatic ppO₂, MOD, and OTU calculation."
+      },
+      {
+        "icon": "wave",
+        "title": "Freediving Mode",
+        "desc": "Auto dive detection, surface interval timer, and max depth recording."
+      },
+      {
+        "icon": "alert",
+        "title": "Safety Alerts",
+        "desc": "Real-time warnings for ascent rate, ceiling violation, CNS, and OTU. 6-level haptic feedback."
+      },
+      {
+        "icon": "phone",
+        "title": "iPhone Companion App",
+        "desc": "Review dive logs, depth profile graphs, and sync settings wirelessly."
+      }
+    ]
+  },
+  "screenshots": {
+    "title": "Dive Computer on Your Wrist",
+    "subtitle": "4-zone adaptive dive display, optimized for Apple Watch Ultra",
+    "labels": ["Pre-Dive", "Diving"]
+  },
+  "requirements": {
+    "title": "Compatibility",
+    "items": [
+      {
+        "title": "Apple Watch Ultra",
+        "desc": "1st · 2nd · 3rd generation",
+        "note": "Depth sensor required"
+      },
+      {
+        "title": "watchOS 10 or later",
+        "desc": "Supported on Apple Watch Ultra"
+      },
+      {
+        "title": "iPhone + iOS 17 or later",
+        "desc": "For companion app and settings sync"
+      }
+    ]
+  },
+  "footer": {
+    "disclaimer": "Divetools is not a replacement for PADI/SSI certified dive computers. Always dive with certified equipment.",
+    "privacy": "Privacy Policy",
+    "github": "GitHub",
+    "appStore": "App Store",
+    "copyright": "© 2026 Cortexys"
+  }
+}
