@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import Screenshots from "@/components/Screenshots";
-import Requirements from "@/components/Requirements";
+import AppShowcase from "@/components/AppShowcase";
 import Footer from "@/components/Footer";
 
 export default function Page() {
@@ -12,7 +12,7 @@ export default function Page() {
       <Hero />
       <Features />
       <Screenshots />
-      <Requirements />
+      <AppShowcase />
       <Footer />
     </main>
   );

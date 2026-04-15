@@ -1,22 +1,20 @@
 "use client";
 
+import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 
 const GITHUB_URL = "https://github.com/cortexys-team/dive-computer-watch";
-const PRIVACY_URL = "https://github.com/cortexys-team/dive-computer-watch/blob/main/PRIVACY.md";
 const APP_STORE_URL = "https://apps.apple.com/app/id6762140303";
 
 export default function Footer() {
   const t = useTranslations("footer");
+  const params = useParams();
+  const locale = params?.locale ?? "ko";
 
   return (
     <footer className="border-t border-white/5 py-12 px-5">
       <div className="max-w-5xl mx-auto flex flex-col items-center gap-5">
-        {/* Disclaimer */}
-        <p className="text-xs text-dive-inactive text-center max-w-md leading-relaxed">
-          {t("disclaimer")}
-        </p>
-
         {/* Links */}
         <div className="flex items-center gap-6 text-sm text-dive-inactive">
           <a
@@ -27,14 +25,18 @@ export default function Footer() {
           >
             {t("github")}
           </a>
-          <a
-            href={PRIVACY_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href={`/${locale}/privacy`}
             className="hover:text-white transition-colors"
           >
             {t("privacy")}
-          </a>
+          </Link>
+          <Link
+            href={`/${locale}/terms`}
+            className="hover:text-white transition-colors"
+          >
+            {t("terms")}
+          </Link>
           <a
             href={APP_STORE_URL}
             target="_blank"

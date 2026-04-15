@@ -16,22 +16,25 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-5 pt-20 pb-16 overflow-hidden">
-      {/* Background gradient */}
+      {/* Background video */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover -z-20"
+        src="/videos/dive-bg.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+      />
+
+      {/* Dark overlay over video */}
+      <div className="absolute inset-0 -z-10 bg-ocean-deep/75" />
+
+      {/* Radial gradient vignette */}
       <div
         className="absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(ellipse 80% 60% at 50% 40%, #051A4A 0%, #010D23 70%)",
-        }}
-      />
-
-      {/* Subtle grid overlay */}
-      <div
-        className="absolute inset-0 -z-10 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            "linear-gradient(#3CD3FE 1px, transparent 1px), linear-gradient(90deg, #3CD3FE 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
+            "radial-gradient(ellipse 70% 50% at 50% 40%, transparent 0%, #010D23 80%)",
         }}
       />
 
@@ -99,14 +102,6 @@ export default function Hero() {
             </svg>
             {t("cta")}
           </a>
-
-          <span className="flex items-center gap-1.5 text-xs text-dive-inactive border border-white/10 px-4 py-2.5 rounded-full">
-            <svg viewBox="0 0 24 24" fill="none" className="w-3.5 h-3.5 stroke-dive-aqua stroke-2">
-              <rect x="5" y="2" width="14" height="20" rx="3"/>
-              <circle cx="12" cy="17" r="1"/>
-            </svg>
-            {t("badge")}
-          </span>
         </motion.div>
 
         {/* Free badge */}

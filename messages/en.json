@@ -52,27 +52,57 @@
     "subtitle": "4-zone adaptive dive display, optimized for Apple Watch Ultra",
     "labels": ["Pre-Dive", "Diving"]
   },
-  "requirements": {
-    "title": "Compatibility",
-    "items": [
-      {
-        "title": "Apple Watch Ultra",
-        "desc": "1st · 2nd · 3rd generation",
-        "note": "Depth sensor required"
-      },
-      {
-        "title": "watchOS 10 or later",
-        "desc": "Supported on Apple Watch Ultra"
-      },
-      {
-        "title": "iPhone + iOS 17 or later",
-        "desc": "For companion app and settings sync"
-      }
-    ]
+  "showcase": {
+    "title": "Two Apps, One Dive Experience",
+    "subtitle": "Your wrist-mounted dive computer and iPhone companion app work seamlessly together",
+    "watch": {
+      "label": "Watch App",
+      "title": "Built for Apple Watch Ultra",
+      "features": [
+        {
+          "title": "Bühlmann ZHL-16C Decompression",
+          "desc": "Adjustable GF with real-time GF99, SurfGF, and CNS tracking. Industry-standard algorithm."
+        },
+        {
+          "title": "Real-time Depth & Gas Monitoring",
+          "desc": "0.1m precision depth sensor. Up to 4 gas mixes including EAN32 and EAN36."
+        },
+        {
+          "title": "4-Zone Adaptive Dive Display",
+          "desc": "Depth, NDL, deco stops, and ascent rate at a glance — optimized for underwater use."
+        },
+        {
+          "title": "Safety Alerts & Haptic Feedback",
+          "desc": "Instant warnings for ascent rate, ceiling, CNS/OTU violations. 6-level haptic patterns."
+        }
+      ]
+    },
+    "phone": {
+      "label": "iPhone App",
+      "title": "Dive Logs & Analysis",
+      "features": [
+        {
+          "title": "Dive Log Review",
+          "desc": "Browse all recorded dives organized by date, depth, and location."
+        },
+        {
+          "title": "Depth Profile Graph",
+          "desc": "Visual depth-over-time graphs to review and analyze your dive patterns."
+        },
+        {
+          "title": "Settings Sync",
+          "desc": "Gradient factors, gas profiles, and unit preferences sync automatically with your Watch."
+        },
+        {
+          "title": "Apple Health Integration",
+          "desc": "Dive workouts written to Apple Health. Track heart rate and calories alongside dive data."
+        }
+      ]
+    }
   },
   "footer": {
-    "disclaimer": "Divetools is not a replacement for PADI/SSI certified dive computers. Always dive with certified equipment.",
     "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
     "github": "GitHub",
     "appStore": "App Store",
     "copyright": "© 2026 Cortexys"
