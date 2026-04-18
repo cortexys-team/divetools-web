@@ -29,12 +29,12 @@ export async function PATCH(req: NextRequest) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const { id, is_read } = await req.json();
+  const body = (await req.json()) as { id: string; is_read: boolean };
   const supabase = createServiceClient();
   const { error } = await supabase
     .from("contacts")
-    .update({ is_read })
-    .eq("id", id);
+    .update({ is_read: body.is_read })
+    .eq("id", body.id);
 
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
   return NextResponse.json({ ok: true });

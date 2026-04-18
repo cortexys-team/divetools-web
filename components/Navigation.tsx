@@ -42,6 +42,14 @@ export default function Navigation() {
 
         {/* Right */}
         <div className="flex items-center gap-3">
+          {/* Dev Log link */}
+          <a
+            href={`/${locale}/devlog`}
+            className="text-xs font-medium text-dive-inactive hover:text-white transition-colors px-2 py-1 rounded-md hover:bg-white/5 hidden sm:block"
+          >
+            {t("devlog")}
+          </a>
+
           {/* Language toggle */}
           <button
             onClick={() => router.push(otherPath)}

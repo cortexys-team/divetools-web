@@ -15,6 +15,9 @@ export default function Footer() {
     <footer className="border-t border-white/5 py-12 px-5">
       <div className="max-w-5xl mx-auto flex flex-col items-center gap-5">
         <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-dive-inactive">
+          <Link href={`/${locale}/devlog`} className="hover:text-white transition-colors">
+            {t("devlog")}
+          </Link>
           <Link href={`/${locale}/contact`} className="hover:text-white transition-colors">
             {t("contact")}
           </Link>

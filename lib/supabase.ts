@@ -14,7 +14,7 @@ export function createServiceClient() {
   const url = process.env.SUPABASE_URL;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!url || !key) throw new Error("Missing SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY");
-  return createClient<{ public: { Tables: { contacts: { Row: Contact } } } }>(url, key, {
-    auth: { persistSession: false },
-  });
+  // No Database generic — cast at call sites to avoid Supabase never-typed insert/update issue
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return createClient(url, key, { auth: { persistSession: false } }) as any;
 }

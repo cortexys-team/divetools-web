@@ -1,7 +1,8 @@
 {
   "nav": {
     "appStore": "App Store",
-    "download": "Download"
+    "download": "Download",
+    "devlog": "Dev Log"
   },
   "hero": {
     "title": "Divetools",
@@ -117,6 +118,7 @@
     "errorGeneric": "Failed to send. Please try again."
   },
   "footer": {
+    "devlog": "Dev Log",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "contact": "Contact",
