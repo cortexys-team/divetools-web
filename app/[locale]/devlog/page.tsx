@@ -23,13 +23,6 @@ export default async function DevLogPage() {
 
       {/* Page hero */}
       <section className="max-w-3xl mx-auto px-5 pt-32 pb-6">
-        <div className="inline-flex items-center gap-2 bg-dive-info/10 border border-dive-info/20 rounded-full px-3 py-1 mb-5">
-          <span className="w-1.5 h-1.5 rounded-full bg-dive-safe animate-pulse" />
-          <span className="text-xs font-medium text-dive-info">
-            {locale === "ko" ? "Build 33 — 2026-04-18" : "Build 33 — Apr 18, 2026"}
-          </span>
-        </div>
-
         <h1 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-3">
           {locale === "ko" ? "개발 로그" : "Development Log"}
         </h1>

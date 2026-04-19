@@ -5,12 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { builds, BuildTag } from "@/lib/devlog-data";
 
 const TAG_STYLE: Record<BuildTag, string> = {
-  watchOS:   "bg-dive-aqua/10 text-dive-aqua",
-  iOS:       "bg-dive-info/10 text-dive-info",
-  Algorithm: "bg-dive-safe/10 text-dive-safe",
-  Fix:       "bg-dive-critical/10 text-dive-critical",
-  "UI/UX":   "bg-dive-caution/10 text-dive-caution",
-  Settings:  "bg-white/10 text-white/60",
+  watchOS:   "bg-dive-aqua/10 text-dive-aqua border border-dive-aqua/20",
+  iOS:       "bg-dive-info/10 text-dive-info border border-dive-info/20",
+  Algorithm: "bg-dive-safe/10 text-dive-safe border border-dive-safe/20",
+  Fix:       "bg-dive-critical/10 text-dive-critical border border-dive-critical/20",
+  "UI/UX":   "bg-dive-caution/10 text-dive-caution border border-dive-caution/20",
+  Settings:  "bg-white/5 text-white/50 border border-white/10",
 };
 
 interface Props {
@@ -19,68 +19,68 @@ interface Props {
 
 export default function DevLog({ locale }: Props) {
   const isKo = locale === "ko";
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <section className="max-w-3xl mx-auto px-5 pb-24 pt-10">
-      {/* Stats row */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-12">
-        {[
-          { num: "33", label: isKo ? "현재 빌드" : "Current Build", color: "text-dive-safe" },
-          { num: "19", label: isKo ? "알고리즘 테스트" : "Algorithm Tests", color: "text-dive-info" },
-          { num: "16", label: isKo ? "ZHL-16C 구획" : "ZHL-16C Compartments", color: "text-dive-aqua" },
-          { num: "2",  label: isKo ? "플랫폼" : "Platforms", color: "text-dive-caution" },
-        ].map((s, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.06, duration: 0.4 }}
-            className="bg-white/[0.04] border border-white/[0.07] rounded-xl p-4 text-center"
-          >
-            <div className={`text-3xl font-bold ${s.color}`}>{s.num}</div>
-            <div className="text-xs text-dive-inactive mt-1">{s.label}</div>
-          </motion.div>
-        ))}
-      </div>
+    <section className="max-w-3xl mx-auto px-5 pb-24 pt-6">
 
-      {/* Build cards */}
-      <div className="space-y-3">
+      {/* ── Board table ── */}
+      <div className="border border-white/[0.08] rounded-2xl overflow-hidden">
+
+        {/* Table header */}
+        <div className="grid grid-cols-[56px_1fr_auto] sm:grid-cols-[64px_1fr_auto_120px] items-center gap-x-4 px-5 py-2.5 bg-white/[0.03] border-b border-white/[0.07]">
+          <span className="text-[11px] font-semibold uppercase tracking-widest text-dive-inactive">
+            {isKo ? "빌드" : "Build"}
+          </span>
+          <span className="text-[11px] font-semibold uppercase tracking-widest text-dive-inactive">
+            {isKo ? "제목" : "Title"}
+          </span>
+          <span className="text-[11px] font-semibold uppercase tracking-widest text-dive-inactive text-right sm:hidden">
+            {isKo ? "날짜" : "Date"}
+          </span>
+          <span className="hidden sm:block text-[11px] font-semibold uppercase tracking-widest text-dive-inactive text-right">
+            {isKo ? "날짜" : "Date"}
+          </span>
+        </div>
+
+        {/* Rows */}
         {builds.map((b, i) => {
           const isOpen = openIndex === i;
+          const title  = isKo ? b.titleKo : b.titleEn;
           const changes = isKo ? b.changesKo : b.changesEn;
           const tests   = isKo ? b.testsKo   : b.testsEn;
-          const title   = isKo ? b.titleKo   : b.titleEn;
           const note    = isKo ? b.noteKo    : b.noteEn;
 
           return (
             <motion.div
               key={b.build}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.04, duration: 0.35 }}
-              className="bg-white/[0.04] border border-white/[0.07] rounded-2xl overflow-hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: i * 0.03, duration: 0.3 }}
+              className={`border-b border-white/[0.06] last:border-b-0 ${isOpen ? "bg-white/[0.04]" : ""}`}
             >
-              {/* Header */}
+              {/* Row button */}
               <button
                 onClick={() => toggle(i)}
-                className="w-full text-left px-5 py-4 flex items-start gap-4 hover:bg-white/[0.03] transition-colors"
+                className="w-full text-left grid grid-cols-[56px_1fr_auto] sm:grid-cols-[64px_1fr_auto_120px] items-start gap-x-4 px-5 py-3.5 hover:bg-white/[0.03] transition-colors"
               >
                 {/* Build number */}
-                <span className="text-dive-info font-bold text-sm min-w-[64px] pt-0.5 font-mono">
-                  Build {b.build}
+                <span className="font-mono text-sm font-bold text-dive-info pt-0.5">
+                  {b.build}
                 </span>
 
                 {/* Title + tags */}
-                <div className="flex-1 min-w-0">
-                  <p className="font-semibold text-sm text-white leading-snug">{title}</p>
-                  <div className="flex flex-wrap gap-1.5 mt-2">
+                <div className="min-w-0">
+                  <p className={`text-sm font-medium leading-snug truncate ${isOpen ? "text-white" : "text-white/80"}`}>
+                    {title}
+                  </p>
+                  <div className="flex flex-wrap gap-1 mt-1.5">
                     {b.tags.map((tag) => (
                       <span
                         key={tag}
-                        className={`text-[11px] font-medium px-2 py-0.5 rounded-full ${TAG_STYLE[tag]}`}
+                        className={`text-[10px] font-medium px-1.5 py-0.5 rounded-md ${TAG_STYLE[tag]}`}
                       >
                         {tag}
                       </span>
@@ -88,20 +88,32 @@ export default function DevLog({ locale }: Props) {
                   </div>
                 </div>
 
-                {/* Date + chevron */}
-                <div className="flex items-center gap-2 flex-shrink-0 pt-0.5">
-                  <span className="text-xs text-dive-inactive hidden sm:block">{b.date}</span>
+                {/* Chevron (mobile) */}
+                <div className="flex flex-col items-end gap-1 pt-0.5 sm:hidden">
+                  <span className="text-[11px] text-dive-inactive">{b.date}</span>
                   <motion.span
                     animate={{ rotate: isOpen ? 90 : 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="text-dive-inactive text-xs"
+                    transition={{ duration: 0.18 }}
+                    className="text-dive-inactive text-[10px]"
+                  >
+                    ▶
+                  </motion.span>
+                </div>
+
+                {/* Date + chevron (desktop) */}
+                <div className="hidden sm:flex items-center justify-end gap-2">
+                  <span className="text-xs text-dive-inactive tabular-nums">{b.date}</span>
+                  <motion.span
+                    animate={{ rotate: isOpen ? 90 : 0 }}
+                    transition={{ duration: 0.18 }}
+                    className="text-dive-inactive text-[10px]"
                   >
                     ▶
                   </motion.span>
                 </div>
               </button>
 
-              {/* Body */}
+              {/* Expanded body */}
               <AnimatePresence initial={false}>
                 {isOpen && (
                   <motion.div
@@ -109,12 +121,10 @@ export default function DevLog({ locale }: Props) {
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.25, ease: "easeInOut" }}
+                    transition={{ duration: 0.22, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <div className="border-t border-white/[0.07] px-5 pb-5 pt-4 space-y-5">
-                      {/* Date (mobile) */}
-                      <p className="text-xs text-dive-inactive sm:hidden">{b.date}</p>
+                    <div className="mx-5 mb-5 mt-1 space-y-5 border-t border-white/[0.07] pt-4">
 
                       {/* Changes */}
                       <div>
